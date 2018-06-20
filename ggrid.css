@@ -1,0 +1,112 @@
+/* four columns on desktop */
+/* two columns on mobile */
+/* 258px column width at max width */
+/* 36px gutter at max width */
+section {
+    position: relative;
+    max-width: 1096px;
+    width: 80%;
+    background-color: inherit;
+    margin: 0 auto 36px auto;
+    /*overflow: hidden;*/
+}
+section:after {
+    content: " ";
+    float: none;
+    clear: both;
+    display: table;
+}
+
+.col {
+    background-color: inherit;
+    float: left;
+    margin-right: 3.1578947%;
+    min-height: 1px;
+}
+.one.col {
+    width: 22.6315789%;
+}
+.two.col {
+    width: 48.3486239%;
+}
+.three.col {
+    width: 74.2105263%;
+}
+.four.col {
+    width: 100%;
+    margin-right: 0;
+}
+.last.col {
+    margin-right: 0;
+}
+.last.col:after {
+    content: " ";
+    float: none;
+    clear: both;
+}
+
+.offset-one {
+    margin-left: 25.7894736%;
+}
+.offset-two {
+    margin-left: 51.5789472%;
+}
+.offset-three {
+    margin-left: 77.3684208%;
+}
+
+@media all and (max-width: 799px) {
+    .col {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .one.col  {
+        width: 48.3486239%;
+    }
+    .one.col:nth-child(even) {
+        margin-right: 0;
+    }
+    .two.col, .three.col, .four.col {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.debug {
+    background-color: rgba(252, 90, 113, 0.1);
+}
+#debug-columns {
+    position: fixed;
+    max-width: 1096px;
+    width: 80%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: inherit;
+    margin: 0 auto 36px auto;
+    overflow: hidden;
+    height: 100vh;
+    padding: 0;
+    margin; 0;
+}
+#debug-columns .col {
+    box-sizing: border-box;
+    background-color: rgba(252, 90, 113, 0.05);
+    border-left: 1px solid rgba(252, 90, 113, 0.25);
+    border-right: 1px solid rgba(252, 90, 113, 0.25);
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* retina */
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    #debug-columns .col {
+        border-left: 0.5px solid rgba(252, 90, 113, 0.25);
+        border-right: 0.5px solid rgba(252, 90, 113, 0.25);
+    }
+}
+
